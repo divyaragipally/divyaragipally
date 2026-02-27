@@ -12,6 +12,7 @@ body {
   background: #f9fafb;
   color: #1f2937;
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
 /* ===== CONTAINER ===== */
@@ -25,10 +26,12 @@ body {
 header {
   position: fixed;
   width: 100%;
-  background: white;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(8px);
   border-bottom: 1px solid #e5e7eb;
   padding: 15px 0;
   z-index: 1000;
+  transition: 0.3s ease;
 }
 
 .nav {
@@ -47,11 +50,23 @@ nav a {
   text-decoration: none;
   color: #374151;
   font-size: 14px;
+  position: relative;
   transition: 0.3s;
 }
 
-nav a:hover {
-  color: #2563eb;
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: #2563eb;
+  transition: 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 /* ===== HERO ===== */
@@ -62,10 +77,11 @@ nav a:hover {
   justify-content: center;
   text-align: center;
   padding-top: 80px;
+  animation: fadeSlide 1.2s ease forwards;
 }
 
 .hero h1 {
-  font-size: 40px;
+  font-size: 42px;
   font-weight: 600;
 }
 
@@ -99,7 +115,8 @@ nav a:hover {
 }
 
 .btn:hover {
-  background: #1d4ed8;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
 }
 
 .btn-outline {
@@ -116,9 +133,17 @@ nav a:hover {
   color: white;
 }
 
-/* ===== SECTION ===== */
+/* ===== SECTIONS ===== */
 .section {
   padding: 90px 0;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section h2 {
@@ -131,14 +156,15 @@ nav a:hover {
 .card, .project-card {
   background: white;
   padding: 25px;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid #e5e7eb;
   margin-bottom: 20px;
   transition: 0.3s ease;
 }
 
 .card:hover, .project-card:hover {
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
 }
 
 /* ===== GRID ===== */
@@ -150,7 +176,7 @@ nav a:hover {
 
 /* ===== SKILLS ===== */
 .skills-grid div {
-  background: #ffffff;
+  background: white;
   padding: 15px;
   border-radius: 6px;
   border: 1px solid #e5e7eb;
@@ -160,6 +186,7 @@ nav a:hover {
 
 .skills-grid div:hover {
   border-color: #2563eb;
+  transform: scale(1.03);
 }
 
 /* ===== PROJECT LINKS ===== */
@@ -169,27 +196,11 @@ nav a:hover {
   text-decoration: none;
   color: #2563eb;
   font-size: 14px;
+  transition: 0.3s;
 }
 
 .project-card a:hover {
-  text-decoration: underline;
-}
-
-/* ===== CERTIFICATIONS ===== */
-.cert-list {
-  list-style: none;
-  text-align: center;
-}
-
-.cert-list li {
-  margin-bottom: 10px;
-  color: #4b5563;
-}
-
-/* ===== CONTACT ===== */
-#contact p {
-  text-align: center;
-  margin-bottom: 8px;
+  letter-spacing: 0.5px;
 }
 
 /* ===== FOOTER ===== */
@@ -201,12 +212,14 @@ footer {
   color: #6b7280;
 }
 
-/* ===== RESPONSIVE ===== */
-@media(max-width: 768px) {
-  nav {
-    display: none;
+/* ===== ANIMATIONS ===== */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  .hero h1 {
-    font-size: 30px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
