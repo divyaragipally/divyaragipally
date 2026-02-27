@@ -1,293 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="assets/css/styles.css">
-
-  <!-- =====BOX ICONS===== -->
-  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-
-  <title>Portfolio website </title>
+  <title>Divya Ragipally | Data Analyst</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <!--===== HEADER =====-->
-  <header class="l-header">
-    <nav class="nav bd-grid">
-      <div>
-        <a href="#" class="nav__logo">Divya Ragipally</a>
-      </div>
 
-      <div class="nav__menu" id="nav-menu">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-          <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-          <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
-         
-        </ul>
-      </div>
-
-      <div class="nav__toggle" id="nav-toggle">
-        <i class='bx bx-menu'></i>
-      </div>
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="container nav">
+    <h2 class="logo">Divya Ragipally</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main class="l-main">
-    <!--===== HOME =====-->
-    <section class="home bd-grid" id="home" style="padding-top:205px;">
-      <div class="home__data">
-        <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Divya Ragipally</span></h1>
-
-      </div>
-
-      <div class="home__social">
-        <a href="https://www.linkedin.com/in/divya-ragipally/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-        <a href="https://x.com/Divya_Ragipally" class="home__social-icon"><i class='bx bxl-twitter'></i></a>
-        <a href="https://github.com/divyaragipally" class="home__social-icon"><i class='bx bxl-github'></i></a>
-        <!--<a href="https://drive.google.com/file/d/1Ig_GYK5AWIY6UUQuF_kz7h3sMioorxV1/view?usp=drive_link" class="home_social-icon"><i class='bx bxl-resume'></i></a>-->
-        <a href="https://docs.google.com/document/d/1j-5wG9k6d4dgPZwnQ1SBDNY-fW7Eh-6C/edit?usp=drive_link&ouid=112462565432278223373&rtpof=true&sd=true" class="home__social-icon"><i class="bx bx-file-blank" style="font-size: 1.45rem;"></i> </a>
-
-
-      </div>
-
-      <div class="home__img">
-        <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <mask id="mask0" mask-type="alpha">
-            <path
-              d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
-          </mask>
-          <g mask="url(#mask0)">
-            <path
-              d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
-            <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.png"/>
-          </g>
-        </svg>
-      </div>
-    </section>
-
-    <!--===== ABOUT =====-->
-    <section class="about section " id="about">
-      <h2 class="section-title">About</h2>
-
-      <div class="about__container bd-grid">
-        <div class="about__img">
-          <img src="assets/img/about.jpg" height="150px" width="150px" >
-        </div>
-
-        <div>
-          <h2 class="about__subtitle">👋Hi, I'm Divya!</h2>
-          <p class="about__text">I'm an entry-level Python and Generative AI Engineer passionate about solving real-world challenges with AI-driven solutions. With a B.Tech in Computer Science from Joginpally BR Engineering College, I specialize in Python, SQL, LLMs, Front end, and Generative AI to build innovative applications. <br><br>
-            🚀 What I Do: <br> 
-- Develop AI-powered applications using Python, LangChain, and Generative AI <br>
-- Build intelligent chatbots and automation tools for improved user experiences  <br>
-- Work with ML models for crop yield forecasting, object detection, and real-time weather predictions <br>
-- Experiment with ComfyUI, Stable Diffusion, and OpenWeather API <br><br>
-🎯 My Goal:<br>
-To leverage Generative AI  in creating impactful, scalable solutions while continuously learning and growing in the field.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!--===== SKILLS =====-->
-    <section class="skills section" id="skills">
-      <h2 class="section-title">Skills</h2>
-
-      <div class="skills__container bd-grid">
-        <div>
-          <h2 class="skills__subtitle">Profesional Skills</h2>
-          <p class="skills__text"></p>
-          <div class="skills__data">
-            <div class="skills__names">
-              <i class='bx bxl-html5 skills__icon'></i>
-              <span class="skills__name">HTML & CSS</span>
-            </div>
-          </div>
-          <p class="skills__text"></p>
-          <div class="skills__data">
-            <div class="skills__names">
-              <i class='bx bxl-html5 skills__icon'></i>
-              <span class="skills__name">PYTHON</span>
-            </div>
-          </div>
-          <p class="skills__text"></p>
-          <div class="skills__data">
-            <div class="skills__names">
-              <i class='bx bxl-html5 skills__icon'></i>
-              <span class="skills__name">GITHUB</span>
-            </div>
-          </div>
-          <p class="skills__text"></p>
-          <div class="skills__data">
-            <div class="skills__names">
-              <i class='bx bxl-html5 skills__icon'></i>
-              <span class="skills__name">SQL</span>
-            </div>
-          </div>
-          <p class="skills__text"></p>
-          <div class="skills__data">
-            <div class="skills__names">
-              <i class='bx bxl-html5 skills__icon'></i>
-              <span class="skills__name">STABLE DIFFUSION</span>
-            </div>
-          </div>
-          <p class="skills__text"></p>
-          <div class="skills__data">
-            <div class="skills__names">
-              <i class='bx bxl-html5 skills__icon'></i>
-              <span class="skills__name">COMFYUI</span>
-            </div>
-          </div>
-          <p class="skills__text"></p>
-          <div class="skills__data">
-            <div class="skills__names">
-              <i class='bx bxl-html5 skills__icon'></i>
-              <span class="skills__name">LARGE LANGUAGE MODEL(LangChain)</span>
-            </div>
-          </div>
-         
-          <p class="skills__text"></p>
-          <div class="skills__data">
-            <div class="skills__names">
-              <i class='bx bxl-html5 skills__icon'></i>
-              <span class="skills__name">No-Code AI & Design Tools: Voiceflow, Figma</span>
-             
-         
-            </div>
-          </div>
-        </div>
-        <div>
-          <img src="assets/img/work3.jpg" class="skills__img">
-        </div>
-      </div>
-    </section>
-    <!--<div class="skills__bar skills__html">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">95%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">UX/UI</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>-->
-
-
-
-
-    <!--===== WORK =====-->
-    <section class="work section" id="work">
-  <h2 class="section-title">Projects</h2>
-
-  <div class="work__container bd-grid">
-    <figure class="work__item">
-      <a href="https://creator.voiceflow.com/prototype/66268247b92923d8efa7920f" class="work__img">
-        <img src="assets/img/retail.webp" height="100",width="100">
-      </a>
-      <figcaption class="project-name">Retail Purchase Chatbot</figcaption>
-    </figure>
-
-    <figure class="work__item">
-      <a href="https://creator.voiceflow.com/prototype/661ce0ff9993e7b4333da275" class="work__img">
-        <img src="assets/img/pybot.jpeg" height="100",width="100">
-      </a>
-      <figcaption class="project-name">PyBot Chatbot</figcaption>
-    </figure>
-
-    <figure class="work__item">
-      <a href="https://huggingface.co/spaces/Divya0503/simple_chatbot" class="work__img">
-        <img src="assets/img/chatbot.png" height="100",width="100">
-      </a>
-      <figcaption class="project-name">Simple Chatbot</figcaption>
-    </figure>
-
-    <figure class="work__item">
-      <a href="https://huggingface.co/spaces/Divya0503/owa" class="work__img">
-        <img src="assets/img/weather.jpg" height="100",width="100">
-      </a>
-      <figcaption class="project-name">Weather Forecasting App</figcaption>
-    </figure>
-
-     <figure class="work__item">
-      <a href="https://divyaragipally.github.io/Spotify/signup.html" class="work__img">
-        <img src="assets/img/spotify.png" height="100",width="100">
-      </a>
-      <figcaption class="project-name">Spotify Clone</figcaption>
-    </figure>
-
-     <figure class="work__item">
-      <a href="https://divyaragipally.github.io/divyaragipally/portfolio/index.html" class="work__img">
-        <img src="assets/img/portfolio.jpg" height="100",width="100">
-      </a>
-      <figcaption class="project-name">Portfolio</figcaption>
-    </figure>
-
-     <figure class="work__item">
-        <img src="assets/img/crop.jpg" height="100",width="100">
-      </a>
-      <figcaption class="project-name">Forecasting Crop Yield Using Machine Learning</figcaption>
-    </figure>
-
-     <figure class="work__item">
-        <img src="assets/img/yolo.png" height="100",width="100">
-      </a>
-      <figcaption class="project-name">YOLOV5 for Aircraft Object Detection</figcaption>
-    </figure>
-
-
-    
+<!-- ===== HERO ===== -->
+<section id="home" class="hero">
+  <div class="container">
+    <h1>Hi, I'm <span>Divya Ragipally</span></h1>
+    <h3>Aspiring Data Analyst</h3>
+    <p>Python | SQL | Excel | Power BI | Data Visualization</p>
+    <div class="buttons">
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="DIVYA RAGIPALLY.pdf" class="btn-outline" download>Download Resume</a>
+    </div>
   </div>
 </section>
 
-  <!--===== FOOTER =====-->
-  <footer class="footer">
-    <p class="footer__title">Divya</p>
-    <p class="footer__copy">©All rights reserved</p>
-  </footer>
+<!-- ===== ABOUT ===== -->
+<section id="about" class="section">
+  <div class="container">
+    <h2>About Me</h2>
+    <p>
+      Data Analyst Fresher skilled in Python, SQL, Excel, and Power BI.
+      Experienced in data cleaning, exploratory data analysis (EDA),
+      predictive modeling, and dashboard development.
+      Passionate about transforming raw data into actionable insights
+      for business decision-making.
+    </p>
+  </div>
+</section>
 
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience" class="section light">
+  <div class="container">
+    <h2>Work Experience</h2>
 
-  <!--===== SCROLL REVEAL =====-->
-  <script src="https://unpkg.com/scrollreveal"></script>
+    <div class="card">
+      <h3>Data Analyst Intern — Zynlogic Technologies</h3>
+      <p>Collected and structured faculty datasets from universities. Cleaned and organized large Excel datasets ensuring 100% accuracy.</p>
+    </div>
 
-  <!--===== MAIN JS =====-->
-  <script src="assets/js/main.js"></script>
+    <div class="card">
+      <h3>Data Science Intern — SkillCraft Technology</h3>
+      <p>Performed data cleaning and EDA using Python. Built Decision Tree model for customer purchase prediction and visualized insights.</p>
+    </div>
+
+    <div class="card">
+      <h3>Data Science with GenAI Intern — Innomatics</h3>
+      <p>Hands-on training in Data Science and AI. Working on real-world analytics and predictive modeling projects.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills" class="section">
+  <div class="container">
+    <h2>Technical Skills</h2>
+
+    <div class="skills-grid">
+      <div>Python (Pandas, NumPy, Matplotlib)</div>
+      <div>SQL (Joins, Aggregations)</div>
+      <div>Excel (Pivot Tables, VLOOKUP)</div>
+      <div>Power BI</div>
+      <div>Data Cleaning</div>
+      <div>Exploratory Data Analysis</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="section light">
+  <div class="container">
+    <h2>Projects</h2>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <h3>Customer Churn Prediction</h3>
+        <p>Built ML models (Logistic Regression & Random Forest) to predict customer churn and derive retention strategies.</p>
+        <a href="https://github.com/divyaragipally/Customer-churn-prediction-using-ML" target="_blank">View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Weather Forecasting Web App</h3>
+        <p>Developed responsive web app delivering real-time weather data using API integration.</p>
+        <a href="https://huggingface.co/spaces/Divya0503/owa" target="_blank">Live Demo</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Crop Yield Prediction</h3>
+        <p>Designed predictive ML model improving crop yield accuracy by 20% to support agricultural planning.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>YOLOv5 Aircraft Detection</h3>
+        <p>Improved object detection accuracy by 15% on noisy aerial datasets through model tuning.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CERTIFICATIONS ===== -->
+<section id="certifications" class="section">
+  <div class="container">
+    <h2>Certifications</h2>
+    <ul class="cert-list">
+      <li>Deloitte Data Analytics Job Simulation – Forage</li>
+      <li>SQL (Basic & Intermediate) – HackerRank</li>
+      <li>Oracle Cloud Infrastructure AI Foundations Associate 2025</li>
+      <li>LangChain with Python Bootcamp – Udemy</li>
+      <li>Generative AI Learnathon – GUVI</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="section light">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>Email: divyaragipally@gmail.com</p>
+    <p>
+      <a href="https://www.linkedin.com/in/divya-ragipally/" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/divyaragipally" target="_blank">GitHub</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Divya Ragipally | Data Analyst Portfolio</p>
+</footer>
+
 </body>
-
 </html>
