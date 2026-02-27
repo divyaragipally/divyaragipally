@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Divya Ragipally | Data Analyst</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -20,9 +20,15 @@
 
 body {
   background: #f9fafb;
-  color: #1f2937;
+  color: #111827;
   line-height: 1.7;
   overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
 }
 
 /* ===== NAVBAR ===== */
@@ -30,16 +36,10 @@ header {
   position: fixed;
   width: 100%;
   background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid #e5e7eb;
-  padding: 15px 0;
+  padding: 18px 0;
   z-index: 1000;
-}
-
-.container {
-  width: 85%;
-  max-width: 1000px;
-  margin: auto;
 }
 
 .nav {
@@ -53,6 +53,7 @@ nav a {
   text-decoration: none;
   color: #374151;
   font-size: 14px;
+  font-weight: 500;
   position: relative;
 }
 
@@ -80,7 +81,6 @@ nav a:hover::after {
   text-align: center;
   padding-top: 80px;
   position: relative;
-  animation: fadeSlide 1.2s ease forwards;
 }
 
 .background-pattern {
@@ -91,54 +91,58 @@ nav a:hover::after {
   background-size: 40px 40px;
   opacity: 0.4;
   z-index: -1;
-  animation: moveBg 20s linear infinite;
+  animation: moveBg 25s linear infinite;
 }
 
 .hero h1 {
-  font-size: 42px;
-  font-weight: 600;
+  font-size: 48px;
+  font-weight: 700;
 }
 
-.hero h1 span {
+.hero span {
   color: #2563eb;
 }
 
 .typing {
   font-weight: 500;
   color: #2563eb;
-  margin-top: 12px;
-  min-height: 28px;
+  margin-top: 15px;
+  min-height: 30px;
 }
 
 .hero p {
-  margin-top: 10px;
+  margin-top: 15px;
   color: #6b7280;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .buttons {
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
 .btn {
   background: #2563eb;
   color: white;
-  padding: 10px 22px;
-  border-radius: 6px;
+  padding: 12px 26px;
+  border-radius: 8px;
   text-decoration: none;
-  margin-right: 10px;
+  margin-right: 15px;
   transition: 0.3s ease;
+  font-weight: 500;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(37,99,235,0.2);
 }
 
 .btn-outline {
   border: 1px solid #2563eb;
   color: #2563eb;
-  padding: 10px 22px;
-  border-radius: 6px;
+  padding: 12px 26px;
+  border-radius: 8px;
   text-decoration: none;
   transition: 0.3s ease;
 }
@@ -151,29 +155,29 @@ nav a:hover::after {
 /* ===== STATS ===== */
 .stats {
   background: white;
-  padding: 60px 0;
+  padding: 80px 0;
   text-align: center;
 }
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 30px;
 }
 
 .stat h2 {
-  font-size: 36px;
+  font-size: 40px;
   color: #2563eb;
 }
 
 .stat p {
-  margin-top: 8px;
   color: #6b7280;
+  margin-top: 8px;
 }
 
 /* ===== SECTIONS ===== */
 .section {
-  padding: 90px 0;
+  padding: 100px 0;
   opacity: 0;
   transform: translateY(40px);
   transition: 0.8s ease;
@@ -186,28 +190,32 @@ nav a:hover::after {
 
 .section h2 {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  font-size: 30px;
 }
 
 /* ===== CARDS ===== */
 .card, .project-card {
   background: white;
-  padding: 25px;
-  border-radius: 10px;
+  padding: 30px;
+  border-radius: 12px;
   border: 1px solid #e5e7eb;
-  margin-bottom: 20px;
   transition: 0.3s ease;
 }
 
 .card:hover, .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
 }
 
 .skills-grid, .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
 }
 
 .project-card a {
@@ -215,23 +223,18 @@ nav a:hover::after {
   margin-top: 12px;
   text-decoration: none;
   color: #2563eb;
+  font-weight: 500;
 }
 
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
-  padding: 25px;
+  padding: 30px;
   border-top: 1px solid #e5e7eb;
-  font-size: 14px;
   color: #6b7280;
 }
 
-/* ===== ANIMATIONS ===== */
-@keyframes fadeSlide {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
+/* ===== ANIMATION ===== */
 @keyframes moveBg {
   from { background-position: 0 0; }
   to { background-position: 100px 100px; }
@@ -247,7 +250,9 @@ footer {
     <h3>Divya Ragipally</h3>
     <nav>
       <a href="#about">About</a>
+      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -258,7 +263,10 @@ footer {
   <div class="container">
     <h1>Hi, I'm <span>Divya Ragipally</span></h1>
     <h3 class="typing"></h3>
-    <p>Python | SQL | Excel | Power BI | Data Visualization</p>
+    <p>
+      Data Analyst passionate about transforming raw data into meaningful business insights.
+      Skilled in Python, SQL, Excel, and Power BI with hands-on experience in analytics and machine learning projects.
+    </p>
     <div class="buttons">
       <a href="#projects" class="btn">View Projects</a>
       <a href="DIVYA RAGIPALLY.pdf" class="btn-outline" download>Download Resume</a>
@@ -274,7 +282,7 @@ footer {
     </div>
     <div class="stat">
       <h2 class="counter" data-target="5">0</h2>
-      <p>Major Projects</p>
+      <p>Analytics Projects</p>
     </div>
     <div class="stat">
       <h2 class="counter" data-target="4">0</h2>
@@ -287,8 +295,21 @@ footer {
   <div class="container">
     <h2>About Me</h2>
     <div class="card">
-      Data Analyst Fresher skilled in Python, SQL, Excel, and Power BI.
-      Passionate about transforming raw data into actionable insights.
+      I am a motivated Data Analyst with internship experience in data cleaning, visualization, and predictive modeling.
+      I enjoy working with structured and unstructured data to uncover trends and provide actionable insights
+      that support strategic business decisions.
+    </div>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="container">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="card"><strong>Programming:</strong><br>Python, SQL</div>
+      <div class="card"><strong>Data Visualization:</strong><br>Power BI, Excel</div>
+      <div class="card"><strong>Libraries:</strong><br>Pandas, NumPy, Matplotlib, Scikit-learn</div>
+      <div class="card"><strong>Tools:</strong><br>Git, GitHub, VS Code, Jupyter Notebook</div>
     </div>
   </div>
 </section>
@@ -300,20 +321,29 @@ footer {
 
       <div class="project-card">
         <h3>Customer Churn Prediction</h3>
-        <p>Built ML models to predict customer churn and improve retention strategies.</p>
-        <a href="https://github.com/divyaragipally/Customer-churn-prediction-using-ML" target="_blank">View Project</a>
-      </div>
-
-      <div class="project-card">
-        <h3>Weather Data Analysis App</h3>
-        <p>Developed real-time data app using API integration.</p>
+        <p>Built ML models to predict churn and improve customer retention using classification algorithms.</p>
+        <a href="https://github.com/divyaragipally/Customer-churn-prediction-using-ML" target="_blank">View on GitHub</a>
       </div>
 
       <div class="project-card">
         <h3>Crop Yield Prediction</h3>
-        <p>Predictive ML model improving agricultural planning accuracy.</p>
+        <p>Developed predictive models to estimate agricultural yield based on environmental factors.</p>
       </div>
 
+      <div class="project-card">
+        <h3>Weather Data Analysis</h3>
+        <p>Analyzed weather trends using API data integration and visualization dashboards.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="experience">
+  <div class="container">
+    <h2>Internship Experience</h2>
+    <div class="card">
+      Completed internships focused on data preprocessing, dashboard creation, and business insights generation using Excel, SQL, and Python.
     </div>
   </div>
 </section>
@@ -371,8 +401,9 @@ document.addEventListener("DOMContentLoaded", function () {
   setTimeout(type, 800);
 });
 
-/* Counter */
+/* Counter Animation */
 const counters = document.querySelectorAll(".counter");
+
 const runCounter = () => {
   counters.forEach(counter => {
     const target = +counter.getAttribute("data-target");
@@ -389,7 +420,19 @@ const runCounter = () => {
     updateCounter();
   });
 };
+
 window.addEventListener("scroll", runCounter);
+
+/* Scroll Reveal */
+const sections = document.querySelectorAll(".section");
+window.addEventListener("scroll", () => {
+  sections.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      section.classList.add("show");
+    }
+  });
+});
 
 </script>
 
