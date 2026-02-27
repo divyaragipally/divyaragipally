@@ -1,52 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Divya Ragipally | Data Analyst</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divya Ragipally | Data Analyst</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f9fafb;
+  color: #1f2937;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ===== NAVBAR ===== */
+header {
+  position: fixed;
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e5e7eb;
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+.container {
+  width: 85%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #374151;
+  font-size: 14px;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: #2563eb;
+  transition: 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== HERO ===== */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 80px;
+  position: relative;
+  animation: fadeSlide 1.2s ease forwards;
+}
+
+.background-pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.4;
+  z-index: -1;
+  animation: moveBg 20s linear infinite;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.hero h1 span {
+  color: #2563eb;
+}
+
+.typing {
+  font-weight: 500;
+  color: #2563eb;
+  margin-top: 12px;
+  min-height: 28px;
+}
+
+.hero p {
+  margin-top: 10px;
+  color: #6b7280;
+}
+
+.buttons {
+  margin-top: 25px;
+}
+
+.btn {
+  background: #2563eb;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+}
+
+.btn-outline {
+  border: 1px solid #2563eb;
+  color: #2563eb;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* ===== STATS ===== */
+.stats {
+  background: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+}
+
+.stat h2 {
+  font-size: 36px;
+  color: #2563eb;
+}
+
+.stat p {
+  margin-top: 8px;
+  color: #6b7280;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 90px 0;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* ===== CARDS ===== */
+.card, .project-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 20px;
+  transition: 0.3s ease;
+}
+
+.card:hover, .project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+.skills-grid, .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 12px;
+  text-decoration: none;
+  color: #2563eb;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes moveBg {
+  from { background-position: 0 0; }
+  to { background-position: 100px 100px; }
+}
+
+</style>
 </head>
-<script>
-  const sections = document.querySelectorAll('.section');
 
-  const reveal = () => {
-    const triggerBottom = window.innerHeight * 0.85;
-
-    sections.forEach(section => {
-      const sectionTop = section.getBoundingClientRect().top;
-
-      if(sectionTop < triggerBottom) {
-        section.classList.add('show');
-      }
-    });
-  }
-
-  window.addEventListener('scroll', reveal);
-  reveal();
-</script>
 <body>
 
-<!-- ===== HEADER ===== -->
 <header>
   <div class="container nav">
-    <h2 class="logo">Divya Ragipally</h2>
+    <h3>Divya Ragipally</h3>
     <nav>
-      <a href="#home">Home</a>
       <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
-      <a href="#certifications">Certifications</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
-<section id="home" class="hero">
+<section class="hero">
+  <div class="background-pattern"></div>
   <div class="container">
     <h1>Hi, I'm <span>Divya Ragipally</span></h1>
-    <h3>Aspiring Data Analyst</h3>
+    <h3 class="typing"></h3>
     <p>Python | SQL | Excel | Power BI | Data Visualization</p>
     <div class="buttons">
       <a href="#projects" class="btn">View Projects</a>
@@ -55,108 +266,59 @@
   </div>
 </section>
 
-<!-- ===== ABOUT ===== -->
-<section id="about" class="section">
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat">
+      <h2 class="counter" data-target="3">0</h2>
+      <p>Internships</p>
+    </div>
+    <div class="stat">
+      <h2 class="counter" data-target="5">0</h2>
+      <p>Major Projects</p>
+    </div>
+    <div class="stat">
+      <h2 class="counter" data-target="4">0</h2>
+      <p>Certifications</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
   <div class="container">
     <h2>About Me</h2>
-    <p>
+    <div class="card">
       Data Analyst Fresher skilled in Python, SQL, Excel, and Power BI.
-      Experienced in data cleaning, exploratory data analysis (EDA),
-      predictive modeling, and dashboard development.
-      Passionate about transforming raw data into actionable insights
-      for business decision-making.
-    </p>
-  </div>
-</section>
-
-<!-- ===== EXPERIENCE ===== -->
-<section id="experience" class="section light">
-  <div class="container">
-    <h2>Work Experience</h2>
-
-    <div class="card">
-      <h3>Data Analyst Intern — Zynlogic Technologies</h3>
-      <p>Collected and structured faculty datasets from universities. Cleaned and organized large Excel datasets ensuring 100% accuracy.</p>
-    </div>
-
-    <div class="card">
-      <h3>Data Science Intern — SkillCraft Technology</h3>
-      <p>Performed data cleaning and EDA using Python. Built Decision Tree model for customer purchase prediction and visualized insights.</p>
-    </div>
-
-    <div class="card">
-      <h3>Data Science with GenAI Intern — Innomatics</h3>
-      <p>Hands-on training in Data Science and AI. Working on real-world analytics and predictive modeling projects.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ===== SKILLS ===== -->
-<section id="skills" class="section">
-  <div class="container">
-    <h2>Technical Skills</h2>
-
-    <div class="skills-grid">
-      <div>Python (Pandas, NumPy, Matplotlib)</div>
-      <div>SQL (Joins, Aggregations)</div>
-      <div>Excel (Pivot Tables, VLOOKUP)</div>
-      <div>Power BI</div>
-      <div>Data Cleaning</div>
-      <div>Exploratory Data Analysis</div>
+      Passionate about transforming raw data into actionable insights.
     </div>
   </div>
 </section>
 
-<!-- ===== PROJECTS ===== -->
-<section id="projects" class="section light">
+<section class="section" id="projects">
   <div class="container">
     <h2>Projects</h2>
-
     <div class="projects-grid">
 
       <div class="project-card">
         <h3>Customer Churn Prediction</h3>
-        <p>Built ML models (Logistic Regression & Random Forest) to predict customer churn and derive retention strategies.</p>
-        <a href="https://github.com/divyaragipally/Customer-churn-prediction-using-ML" target="_blank">View on GitHub</a>
+        <p>Built ML models to predict customer churn and improve retention strategies.</p>
+        <a href="https://github.com/divyaragipally/Customer-churn-prediction-using-ML" target="_blank">View Project</a>
       </div>
 
       <div class="project-card">
-        <h3>Weather Forecasting Web App</h3>
-        <p>Developed responsive web app delivering real-time weather data using API integration.</p>
-        <a href="https://huggingface.co/spaces/Divya0503/owa" target="_blank">Live Demo</a>
+        <h3>Weather Data Analysis App</h3>
+        <p>Developed real-time data app using API integration.</p>
       </div>
 
       <div class="project-card">
         <h3>Crop Yield Prediction</h3>
-        <p>Designed predictive ML model improving crop yield accuracy by 20% to support agricultural planning.</p>
-      </div>
-
-      <div class="project-card">
-        <h3>YOLOv5 Aircraft Detection</h3>
-        <p>Improved object detection accuracy by 15% on noisy aerial datasets through model tuning.</p>
+        <p>Predictive ML model improving agricultural planning accuracy.</p>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ===== CERTIFICATIONS ===== -->
-<section id="certifications" class="section">
-  <div class="container">
-    <h2>Certifications</h2>
-    <ul class="cert-list">
-      <li>Deloitte Data Analytics Job Simulation – Forage</li>
-      <li>SQL (Basic & Intermediate) – HackerRank</li>
-      <li>Oracle Cloud Infrastructure AI Foundations Associate 2025</li>
-      <li>LangChain with Python Bootcamp – Udemy</li>
-      <li>Generative AI Learnathon – GUVI</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ===== CONTACT ===== -->
-<section id="contact" class="section light">
+<section class="section" id="contact">
   <div class="container">
     <h2>Contact</h2>
     <p>Email: divyaragipally@gmail.com</p>
@@ -168,8 +330,68 @@
 </section>
 
 <footer>
-  <p>© 2026 Divya Ragipally | Data Analyst Portfolio</p>
+  © 2026 Divya Ragipally | Data Analyst Portfolio
 </footer>
+
+<script>
+
+/* Typing Effect */
+const textArray = [
+  "Aspiring Data Analyst",
+  "Turning Data into Insights",
+  "Python | SQL | Power BI"
+];
+
+let typingElement = document.querySelector(".typing");
+let textIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if (charIndex < textArray[textIndex].length) {
+    typingElement.textContent += textArray[textIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, 60);
+  } else {
+    setTimeout(erase, 1500);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    typingElement.textContent = textArray[textIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(erase, 40);
+  } else {
+    textIndex = (textIndex + 1) % textArray.length;
+    setTimeout(type, 500);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(type, 800);
+});
+
+/* Counter */
+const counters = document.querySelectorAll(".counter");
+const runCounter = () => {
+  counters.forEach(counter => {
+    const target = +counter.getAttribute("data-target");
+    const increment = target / 100;
+    const updateCounter = () => {
+      const count = +counter.innerText;
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCounter, 20);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    updateCounter();
+  });
+};
+window.addEventListener("scroll", runCounter);
+
+</script>
 
 </body>
 </html>
