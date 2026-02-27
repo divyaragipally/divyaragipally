@@ -1,4 +1,6 @@
-🔹 SIDEBAR
+vCard - Personal Portfolio
+
+# sidebar
 
 Alt: Ragipally Divya
 Name: Ragipally Divya
